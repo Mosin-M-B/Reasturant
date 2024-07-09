@@ -24,10 +24,11 @@ const Menu = () => {
 
   return (
     <Layout>
-      <div className="container">
+      <div className="container" >
         {MenuList.map((menu) => (
           <div
             className="card"
+            id={menu.id}
             key={menu.id}
             onClick={() => handleProductClick(menu)}
           >
