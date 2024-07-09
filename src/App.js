@@ -4,6 +4,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Menu from "./pages/Menu";
 import Pagenotfound from "./pages/Pagenotfound";
+import './App.css'
 function App() {
   return (
     <div>

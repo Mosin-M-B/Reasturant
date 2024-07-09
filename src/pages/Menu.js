@@ -1,54 +1,43 @@
 import React from "react";
 import { MenuList } from "../data/data";
 import Layout from "./../components/Layout/Layout";
-import {
-  Box,
-  Card,
-  CardActionArea,
-  CardContent,
-  CardMedia,
-  Typography,
-} from "@mui/material";
-const handleProductClick = (menu) => {
+import "./styles.css"; // Import the CSS file
 
+const handleProductClick = (menu) => {
   window.dataLayer.push({
-    event: 'product_click',
+    event: "product_click",
     product_id: menu.id,
     product_name: menu.name,
-    product_price: menu.name,
+    product_price: menu.price,
     product_class: "item",
   });
 
-  console.log('Data layer push:', {
-   event: 'product_click',
+  console.log("Data layer push:", {
+    event: "product_click",
     product_id: menu.id,
     product_name: menu.name,
-    product_price:  menu.price,
+    product_price: menu.price,
   });
 };
+
 const Menu = () => {
   return (
     <Layout>
-      <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }} >
+      <div className="container">
         {MenuList.map((menu) => (
-          <Card sx={{ maxWidth: "390px", display: "flex", m: 2 }} onClick={handleProductClick(menu)} className={menu.name}>
-            <CardActionArea>
-              <CardMedia
-                sx={{ minHeight: "400px" }}
-                component={"img"}
-                src={menu.image}
-                alt={menu.name}
-              />
-              <CardContent>
-                <Typography variant="h5" gutterBottom component={"div"}>
-                  {menu.name}
-                </Typography>
-                <Typography variant="body2">{menu.description}</Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
+          <div
+            className="card"
+            key={menu.id}
+            onClick={() => handleProductClick(menu)}
+          >
+            <img src={menu.image} alt={menu.name} />
+            <div className="card-content">
+              <h5>{menu.name}</h5>
+              <p>{menu.description}</p>
+            </div>
+          </div>
         ))}
-      </Box>
+      </div>
     </Layout>
   );
 };
