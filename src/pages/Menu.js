@@ -1,7 +1,7 @@
 import React from "react";
 import { MenuList } from "../data/data";
 import Layout from "./../components/Layout/Layout";
-import "./styles.css"; // Import the CSS file
+
 
 const handleProductClick = (menu) => {
   window.dataLayer.push({
@@ -21,7 +21,7 @@ const handleProductClick = (menu) => {
 };
 
 const Menu = () => {
-  
+
   return (
     <Layout>
       <div className="container">
