@@ -16,7 +16,7 @@ const handleProductClick = (menu) => {
     product_id: menu.id,
     product_name: menu.name,
     product_price: menu.name,
-    product_class: menu.name,
+    product_class: "item",
   });
 
   console.log('Data layer push:', {
@@ -31,7 +31,7 @@ const Menu = () => {
     <Layout>
       <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }} >
         {MenuList.map((menu) => (
-          <Card sx={{ maxWidth: "390px", display: "flex", m: 2 }} onClick={handleProductClick(menu)} className={menu.name}>
+          <Card sx={{ maxWidth: "390px", display: "flex", m: 2 }} onClick={handleProductClick(menu)} className="item">
             <CardActionArea>
               <CardMedia
                 sx={{ minHeight: "400px" }}
