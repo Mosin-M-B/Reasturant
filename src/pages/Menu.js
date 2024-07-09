@@ -9,13 +9,29 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
+const handleProductClick = (menu) => {
 
+  window.dataLayer.push({
+    event: 'product_click',
+    product_id: menu.id,
+    product_name: menu.name,
+    product_price: menu.name,
+    product_class: menu.name,
+  });
+
+  console.log('Data layer push:', {
+   event: 'product_click',
+    product_id: menu.id,
+    product_name: menu.name,
+    product_price:  menu.price,
+  });
+};
 const Menu = () => {
   return (
     <Layout>
-      <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
+      <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }} >
         {MenuList.map((menu) => (
-          <Card sx={{ maxWidth: "390px", display: "flex", m: 2 }}>
+          <Card sx={{ maxWidth: "390px", display: "flex", m: 2 }} onClick={handleProductClick(menu)} className={menu.name}>
             <CardActionArea>
               <CardMedia
                 sx={{ minHeight: "400px" }}

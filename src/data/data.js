@@ -7,6 +7,7 @@ import Gujrati from "../images/gujrati.jpeg";
 
 export const MenuList = [
   {
+    id:'101',
     name: "Dosa",
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, ab!",
@@ -14,6 +15,7 @@ export const MenuList = [
     price: 200,
   },
   {
+    id:'102',
     name: "Chola",
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, ab!",
@@ -21,6 +23,7 @@ export const MenuList = [
     price: 250,
   },
   {
+    id:'103',
     name: "Idli Sambhar",
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, ab!",
@@ -28,6 +31,7 @@ export const MenuList = [
     price: 300,
   },
   {
+    id:'104',
     name: "Masala Dosa",
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, ab!",
@@ -35,6 +39,7 @@ export const MenuList = [
     price: 100,
   },
   {
+    id:'105',
     name: "Paneer",
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, ab!",
@@ -42,6 +47,7 @@ export const MenuList = [
     price: 400,
   },
   {
+    id:'106',
     name: "Gujrati",
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, ab!",
