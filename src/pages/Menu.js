@@ -21,6 +21,7 @@ const handleProductClick = (menu) => {
 };
 
 const Menu = () => {
+  
   return (
     <Layout>
       <div className="container">
