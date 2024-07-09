@@ -31,7 +31,7 @@ const Menu = () => {
     <Layout>
       <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }} >
         {MenuList.map((menu) => (
-          <Card sx={{ maxWidth: "390px", display: "flex", m: 2 }} onClick={handleProductClick(menu)} className="item">
+          <Card sx={{ maxWidth: "390px", display: "flex", m: 2 }} onClick={handleProductClick(menu)} className={menu.name}>
             <CardActionArea>
               <CardMedia
                 sx={{ minHeight: "400px" }}
